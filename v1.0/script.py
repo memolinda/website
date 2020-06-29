@@ -10,7 +10,7 @@ def home(): #content in the decorator
 @app.route('/about/') #create an about page
 
 def about():
-    return "About contents goes here!"
+    return render_template("about.html")
 
 if __name__=="__main__":
     app.run(debug=True)
