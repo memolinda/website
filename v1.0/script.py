@@ -53,12 +53,13 @@ def plot():
 
     from bokeh.embed import components
 
-    scrip1, div1 = components(p) # two strings : script = javascript, div1 = html
+    script1, div1 = components(p) # two strings : script = javascript, div1 = html
 
     from bokeh.resources import CDN #CDN = content delivery method
 
-    cdn_js = CDN.js_files
-    cdn_css = CDN.css_files
+    cdn_js = CDN.js_files[0]
+
+    return render_template("plot.html", script1=script1, div1=div1, cdn_js=cdn_js)
 
 
 if __name__=="__main__":
